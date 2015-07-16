@@ -1,0 +1,19 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/app.js",
+  "dependencies": {
+    "babel-loader": "^5.3.2",
+    "react": "^0.13.3",
+    "webpack": "^1.10.1",
+    "node-libs-browser": "^0.5.2",
+    "babel-core": "^5.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
