@@ -9,6 +9,10 @@ module ApplicationHelper
     js_render(js_expression)
   end
 
+  def js_context_debug
+    js_render("'this is<br>' + JSON.stringify(this)")
+  end
+
   def js_render(js_expression)
     ExecJSRenderer.new.render(js_expression).html_safe
   end

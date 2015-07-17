@@ -4,4 +4,6 @@ const HelloString = {
   }
 };
 
+//global.HelloString = HelloString;
+
 export default HelloString;
