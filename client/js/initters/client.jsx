@@ -25,7 +25,4 @@ const App = (props) => {
 
 }
 
-// TODO: Deal with console warning:
-// Warning: render(): Target node has markup rendered by React, but there are unrelated nodes as well. 
-// This is most commonly caused by white-space inserted around server-rendered markup.
 export default App(__PROP_FROM_RAILS__);

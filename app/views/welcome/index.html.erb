@@ -1,9 +1,7 @@
 <% props = { propFromRails: "Prop from Rails!" } %>
 <%= javascript_tag "window.__PROP_FROM_RAILS__ = #{props.to_json}" %>
 
-<div id="app">
-  <%= react_component("App", props) %>
-</div>
+<div id="app"><%= react_component("App", props) %></div>
 
 <hr>
 <%= js_context_debug %>
