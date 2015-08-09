@@ -7,7 +7,7 @@ module.exports = {
   ],
   output: {
     path: '../app/assets/javascripts/generated',
-    filename: "bundle.js",
+    filename: "server.js",
     libaryTarget: "this"
   },
   resolve: {
@@ -22,9 +22,9 @@ module.exports = {
 
       // 2. Expose the components
       { test: require.resolve("./js/HelloString.js"), loader: "expose?HelloString" },
-      { test: require.resolve("./js/HelloWorld.js"), loader: "expose?HelloWorld" },
+      { test: require.resolve("./js/initters/server.jsx"), loader: "expose?App" },
 
-      { loader: 'babel-loader'}
+      { loader: 'babel-loader?stage=0'}
     ]
   }
 };

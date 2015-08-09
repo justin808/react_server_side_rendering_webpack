@@ -5,9 +5,9 @@ class ExecJSRenderer
   def js_render_react_component
     <<-JS.strip_heredoc
       function renderReactComponent(componentClass, props) {
-         return this.React.renderToString(
-           this.React.createElement(componentClass, props)
-         );
+        return this.React.renderToString(
+         componentClass(props)
+        );
       }
     JS
   end
@@ -32,7 +32,7 @@ class ExecJSRenderer
 
   def bundle_js_code
     # Calling to_s to get contents of sprockets.
-    Rails.application.assets['generated/bundle.js'].to_s
+    Rails.application.assets['generated/server.js'].to_s
   end
 
 end

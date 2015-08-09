@@ -1,5 +1,5 @@
 // Make sure the following files are
-import HelloWorld from './HelloWorld';
+import App from './initters/server.jsx';
 import HelloString from './HelloString';
 
 // Alternative syntax for exposing Vars
@@ -17,4 +17,3 @@ import HelloString from './HelloString';
  //global.HelloString = HelloString;
  //import React from 'react';
  //global.React = React;
-

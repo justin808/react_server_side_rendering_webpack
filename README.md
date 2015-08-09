@@ -5,15 +5,16 @@ SPIKE with Samnang and Justin on making React server render with Webpack!
 # Setup:
 1. bundle
 2. cd client && npm i
-3. $(npm bin)/webpack -w
-4. open another terminal and start rails
+3. Terminal 1: $(npm bin)/webpack --config webpack.server.js -w
+4. Terminal 2: $(npm bin)/webpack --config webpack.client.js -w
+5. Terminal 3: bin/rails s
 
 
 # Notes:
 1. You can mark the globals to export in one of 2 ways:
    a. Use global.Something = Something (see Global.js)
    b. Declare in webpack config file
-2. models/execjs_renderer changes often require a server restart. However, changing the contents 
+2. models/execjs_renderer changes often require a server restart. However, changing the contents
    of the javascript file don't seem matter, so long as webpack recompiles it.
 
 # References
