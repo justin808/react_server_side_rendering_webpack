@@ -18,3 +18,7 @@
 
 /client/node_modules
 /app/assets/javascripts/generated/
+
+# RVM
+.ruby-version
+.ruby-gemset
