@@ -1,9 +1,8 @@
+// Super simple example without using React
 const HelloString = {
   world() {
-    return "Hello WORLD! Will this work??";
+    return "Hello WORLD! Will this work?? Time to visit Maui";
   }
 };
-
-//global.HelloString = HelloString;
 
 export default HelloString;

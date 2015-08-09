@@ -1,9 +1,15 @@
 require 'execjs_renderer'
 
 module ApplicationHelper
-  def react_component(component_name, props = {})
+  # component_name: React component name
+  # props: Hash which contains the properties to pass to the react object
+  # js_code: Optional javascript code to execute before calling renderReactComponent
+  def react_component(component_name, props = {}, js_code = nil)
     js_expression = <<-JS
-      renderReactComponent('#{component_name}', #{props.to_json})
+      // TODO: Pass in arbitrary javascript as well
+      #{js_code}
+      // TODO: Need to pass in some extra prop for redux
+      renderReactComponent(this.#{component_name}, #{props.to_json})
     JS
 
     js_render(js_expression)
