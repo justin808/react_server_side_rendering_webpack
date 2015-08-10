@@ -1,6 +1,7 @@
 # https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server
 web: rails s
-client: cd client && $(npm bin)/webpack -w --config webpack.config.js
+client: cd client && $(npm bin)/webpack -w --config webpack.client.js
+server: cd client && $(npm bin)/webpack -w --config webpack.server.js
 
 # Uncomment the next line if you want to automatically start the webpack hot reload server
 # hot: cd client && node server.js

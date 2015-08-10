@@ -1,6 +1,11 @@
-<% props = { propFromRails: "Prop from Rails!" } %>
-<%= javascript_tag "window.__PROP_FROM_RAILS__ = #{props.to_json}" %>
+<!--TODO MOVE THIS to one helper method react_component("App", props) -->
+<% props = { helloWorldData: { name: "Prop from Rails!" } } %>
+<%= javascript_tag "window.__DATA_FROM_RAILS__ = #{props.to_json}" %>
 
+<!--
+CRITICAL NOT to have white space after wrapper div or else React complains
+that the server side HTML does not match client side.
+-->
 <div id="app"><%= react_component("App", props) %></div>
 
 <hr>

@@ -2,12 +2,15 @@
 <html>
 <head>
   <title>ReactSsr</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
+<!-- TODO: Move back to inside HEAD section. Address loading document ready (page loaded
+           considering the use of turbolinks.
+-->
 <%= javascript_include_tag 'application' %>
 
 </body>

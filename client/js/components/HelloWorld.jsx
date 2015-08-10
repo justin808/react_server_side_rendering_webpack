@@ -3,6 +3,7 @@ import React from 'react';
 // Super simple example of the simplest possible React component
 export default class HelloWorld extends React.Component {
 
+  // Not necessary if we only call super, but we'll need to initialize state, etc.
   constructor(props, context) {
     super(props, context);
   }
@@ -16,12 +17,11 @@ export default class HelloWorld extends React.Component {
     return (
       <div>
         <h1>
-          Hello, {this.props.helloWorld.name}!
+          Hello, {this.props.helloWorldData.name}!
         </h1>
         <p>
-          Say hello to: <input type="text" ref="name" defaultValue={this.props.helloWorld.name} onChange={::this._handleChange} />
+          Say hello to: <input type="text" ref="name" defaultValue={this.props.helloWorldData.name} onChange={::this._handleChange} />
         </p>
-        <p>And this is prop from Rails: {this.props.propFromRails}</p>
       </div>
     );
   }
